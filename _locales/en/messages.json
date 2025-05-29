@@ -1,0 +1,84 @@
+{
+  "extName": {
+    "message": "PDF to Markdown Converter",
+    "description": "Extension name"
+  },
+  "extDesc": {
+    "message": "Convert PDF documents (.pdf) to Markdown.",
+    "description": "Extension description"
+  },
+  "popupTitle": {
+    "message": "PDF to Markdown Converter",
+    "description": "Popup window title"
+  },
+  "outputHeading": {
+    "message": "Markdown Output:",
+    "description": "Heading for the output area"
+  },
+  "copyButtonText": {
+    "message": "Copy Markdown",
+    "description": "Text for the copy button"
+  },
+  "downloadButtonText": {
+    "message": "Download .md File",
+    "description": "Text for the download button"
+  },
+  "statusSelectFile": {
+    "message": "Please select a .pdf file.",
+    "description": "Status: Incorrect file type selected"
+  },
+  "statusConverting": {
+    "message": "Converting...",
+    "description": "Status: Conversion in progress"
+  },
+  "statusSuccess": {
+    "message": "Conversion successful!",
+    "description": "Status: Conversion completed successfully"
+  },
+  "statusReadFileError": {
+    "message": "Error reading file.",
+    "description": "Status: Error reading the selected file"
+  },
+  "statusConversionError": {
+    "message": "Error: $errorMessage$",
+    "description": "Status: Conversion failed (with message)",
+    "placeholders": {
+      "errorMessage": {
+        "content": "$1",
+        "example": "Document is corrupted"
+      }
+    }
+  },
+  "statusCopySuccess": {
+    "message": "Markdown copied to clipboard!",
+    "description": "Status: Copy successful"
+  },
+  "statusCopyError": {
+    "message": "Failed to copy Markdown.",
+    "description": "Status: Copy failed"
+  },
+  "statusDownloadStarted": {
+    "message": "Markdown file download initiated.",
+    "description": "Status: Download started"
+  },
+  "statusUnknownError": {
+    "message": "An unknown error occurred during conversion.",
+    "description": "Status: Generic conversion error"
+  },
+  "fileInputLabel": {
+    "message": "Select PDF file (.pdf):",
+    "description": "Label for the file input (optional in HTML)"
+  },
+  "initialFileName": {
+    "message": "Choose a PDF file",
+    "description": "File name"
+  },
+"heroTitle": { "message": "PDF to <span class=\"highlight\">Markdown</span>" },
+"heroDescription": { "message": " Fast, secure, and reliable." },
+"uploadButtonLabel": { "message": "Upload PDF" },
+"privacyNote": { "message": "All processing is done locally. Your files stay private." },
+"batchConversionHint": {
+    "message": "Need to convert multiple PDFs or require advanced options? Visit <a href=\"https://www.pdf2md.net\" target=\"_blank\">pdf2md.net</a> for batch processing.",
+    "description": "Hint for batch conversion directing users to the website."
+  }
+}

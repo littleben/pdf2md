@@ -1,0 +1,260 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* 使用新字体 */
+    background-color: #FEF0F0; /* 淡红色背景 */
+    color: #1E1E3C; /* 深蓝灰色文字 */
+    min-width: 450px; /* 根据内容调整宽度 */
+    font-size: 14px;
+    padding-bottom: 70px; /* 根据按钮组实际高度调整，确保内容能完全滚出 */
+}
+
+/* Hero Section Styles */
+.hero {
+    padding: 30px 30px;
+    background-color: #FEF0F0; /* 与 body 背景色一致 */
+    /* 添加网格背景 */
+    background-image:
+        linear-gradient(to right, rgba(250, 218, 218, 0.3) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(250, 218, 218, 0.3) 1px, transparent 1px);
+    background-size: 20px 20px; /* 网格大小 */
+}
+
+.hero-title {
+    font-size: 2.8em; /* 增大字体 */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #1E1E3C;
+}
+
+.hero-title .highlight {
+    color: #C93B3B; /* 新的红色高亮 */
+}
+
+.hero-description {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #6B6262; /* 稍浅的暖灰色 */
+    max-width: 500px; /* 限制描述宽度 */
+}
+
+/* Main Content Area */
+.main-content {
+    padding: 30px;
+}
+
+/* Converter Section Styles */
+.converter-section {
+    background-color: #FFFFFF; /* 白色背景 */
+    padding: 25px;
+    border-radius: 12px; /* 圆角 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* 添加细微阴影 */
+    margin-bottom: 20px;
+}
+
+.converter-title {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1E1E3C;
+}
+
+.converter-subtitle {
+    font-size: 0.95em;
+    color: #6B6262;
+    margin-bottom: 20px;
+}
+
+/* File Input Styles */
+.file-input-label {
+    display: flex; /* 使用 flex 布局 */
+    justify-content: space-between; /* 两端对齐 */
+    align-items: center;
+    padding: 12px 15px;
+    border: 1px solid #F5CFCF; /* 淡红色边框 */
+    border-radius: 8px;
+    background-color: #FEF0F0; /* 非常淡的红色背景 */
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+    margin-bottom: 15px;
+}
+
+.file-input-label:hover {
+    background-color: #FBDEDE;
+    border-color: #ECBDBD;
+}
+
+.file-input-label span:first-child { /* "Upload Word Document" 文本 */
+    font-weight: 500;
+    color: #333;
+}
+
+.file-name { /* 文件名显示区域 */
+    font-size: 0.9em;
+    color: #6B6262;
+    background-color: #fff; /* 白色背景强调 */
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.privacy-note {
+    font-size: 0.85em;
+    color: #9E9595; /* 更浅的暖灰色 */
+    text-align: center;
+}
+
+/* Output Section Styles (保持基本样式，可微调) */
+#outputContainer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #F2EAEA; /* 淡红色分隔线 */
+    display: flex;
+    flex-direction: column;
+    /* 考虑为 outputContainer 设置一个最大高度，以便在内容过多时内部滚动 */
+    /* max-height: calc(100vh - 顶部元素高度 - 底部按钮组高度); */
+    /* 例如: max-height: calc(550px - 150px - 70px); 假设 popup 最大高度550，顶部占用150，按钮组70 */
+}
+
+#outputContainer h2 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 500;
+}
+
+textarea#markdownOutput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #F5CFCF;
+    border-radius: 8px;
+    resize: vertical;
+    min-height: 180px; /* 增加最小高度 */
+    background-color: #fff;
+    font-family: monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #333;
+    flex-grow: 1; /* 使文本域占据剩余空间 */
+    /* 如果 #outputContainer 有 max-height, 文本域会在此限制内增长 */
+}
+
+/* Button Styles */
+.button-group {
+    display: flex;
+    gap: 15px; /* 增大按钮间距 */
+    margin-top: 15px;
+}
+
+button {
+    flex-grow: 1; /* 让按钮平分空间 */
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #C93B3B; /* 主题红色 */
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #A83131; /* 深一点的红色 */
+}
+
+button:disabled {
+    background-color: #DCD3D3; /* 暖灰色禁用状态 */
+    cursor: not-allowed;
+}
+
+/* Status Message Styles */
+#status {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #4CAF50; /* 保持绿色成功状态 */
+    min-height: 1.2em;
+    text-align: center;
+    font-weight: 500;
+}
+
+#status.error {
+    color: #F44336; /* 保持红色错误状态 */
+}
+
+/* 当输出可见时，缩小文件上传区域 - 这是之前添加的，保持或根据需要调整 */
+.converter-section.minimized {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.converter-section.minimized .converter-subtitle,
+.converter-section.minimized .privacy-note {
+    display: none;
+}
+
+.converter-section.minimized .file-input-label {
+    padding: 8px 12px;
+    font-size: 0.9em;
+}
+
+.converter-section.minimized #fileName {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+/* 批量转换提示文字样式 - 更新为与 hero-description 一致 */
+.batch-conversion-hint {
+    font-family: 'Inter', sans-serif; /* 继承 body 的字体 */
+    font-size: 1em;       /* 与 hero-description 一致 (相对于 body 的 14px) */
+    line-height: 1.6;     /* 与 hero-description 一致 */
+    color: #6B6262;       /* 与 hero-description 一致 (新的暖灰色) */
+    /* max-width: 500px; */ /* 这一行可以根据需要决定是否添加，如果希望它也限制宽度 */
+    text-align: center;   /* 保持文本居中 */
+    margin-top: 20px;     /* 上边距，可调整 */
+    margin-bottom: 20px;  /* 下边距，可调整 */
+    padding: 0 15px;      /* 左右内边距，可调整 */
+}
+
+/* 针对 batch-conversion-hint 内的链接样式 */
+.batch-conversion-hint a {
+    color: #C93B3B; /* 使用主题红色作为链接颜色 */
+    text-decoration: underline;
+}
+
+.batch-conversion-hint a:hover {
+    color: #A83131; /* 深一点的红色 */
+    text-decoration: none;
+}
+
+/* 使按钮组悬浮驻底 - 这是之前添加的，保持或根据需要调整 */
+#outputContainer .button-group {
+    position: sticky;
+    bottom: 0;
+    background-color: #FEF0F0; /* 与 body 背景色一致 */
+    padding: 12px 20px; /* 调整内边距 */
+    border-top: 1px solid #F2EAEA;
+    z-index: 10;
+    width: 100%; /* 如果按钮组不在一个限制宽度的容器内，确保它不会超出 popup 宽度 */
+                 /* 如果 popup 本身有 padding，可能需要调整 width 或使用 box-sizing */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+    /* 确保按钮组的左右 padding 和 main-content 的 padding 对齐 */
+    /* 如果 main-content padding 是 30px, 那么按钮组也应该有类似的对齐方式 */
+    /* 或者将按钮组移到 main-content 外部，让其父级控制宽度 */
+}
+
+/* 确保内容不会被悬浮按钮遮挡 */
+/* 如果 .main-content 是滚动容器 */
+/* .main-content { */
+/*   padding-bottom: 70px; /* 根据按钮组实际高度调整 */
+/* } */
