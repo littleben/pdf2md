@@ -25,9 +25,6 @@
         "lib/pdf.min.js",
         "lib/pdf.worker.min.js",
         "lib/turndown.min.js"
-      ],
-      "matches": [
-        "chrome-extension://*/popup.html"
       ]
     }
   ]
