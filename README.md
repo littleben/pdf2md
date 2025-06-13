@@ -10,7 +10,7 @@ Easily convert PDF documents (.pdf) into clean, structured Markdown files.
 This project includes two parts:
 
 1.  **[PDF2MD.net](https://www.pdf2md.net/) Website**: An online tool that allows you to quickly and securely convert PDF documents to Markdown, supporting batch conversions and advanced options.
-2.  **Chrome Extension**: Integrates single PDF to Markdown conversion functionality directly into your Chrome browser for a more convenient experience.
+2.  **[Chrome Extension](https://chromewebstore.google.com/detail/pdf-to-markdown-converter/gcopjhjclkeccclpikhpagncpholbiab)**: Integrates single PDF to Markdown conversion functionality directly into your Chrome browser for a more convenient experience.
 
 ## Key Features ✨
 
@@ -34,7 +34,7 @@ PDF2MD is a modern solution focused on providing an accurate and reliable .pdf t
 4.  Supports batch conversion and other advanced features.
 
 ### Chrome Extension
-
+[Add to Chrome](https://chromewebstore.google.com/detail/pdf-to-markdown-converter/gcopjhjclkeccclpikhpagncpholbiab)
 *   After installing the extension, click the extension icon in your browser toolbar.
 *   Upload your single .pdf file in the popup window.
 *   The conversion result will be displayed directly in the popup, ready for copying or downloading.
